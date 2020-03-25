@@ -7,7 +7,7 @@
 |name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :users-groups
 - has_many :groups,  through:  :users-groups
 
 ## messagesテーブル
@@ -26,7 +26,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :users
+- has_many :users-groups
 - has_many :messages
 - has_many :users,  through:  :users-groups
 
