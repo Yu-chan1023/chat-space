@@ -1,3 +1,14 @@
-.side-bar
-  .side-bar__user-name
-  .side-bar__group-list
+.chat-side
+  .side-header
+    .side-header__box
+      %P.side-header__box__user-name minami
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group 
+        = link_to "#" do
+          = icon('fas', 'edit')
+          %span<>
+        %li.side-header__box__menu__edit 
+        = link_to "#" do
+          = icon('fas', 'cog')
+          %span<>
+  .side-groups
