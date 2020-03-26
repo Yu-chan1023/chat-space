@@ -36,9 +36,6 @@
         a {
           color: #ffffff;
         }
-        &__new-group {
-        
-        }
         &__edit {
           margin-left: 5px;
         }
@@ -49,6 +46,23 @@
     height: calc(100vh - 100px);
     width: 100%;
     background-color: #2f3e51;
+    padding: 20px;
+    p {
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .group {
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+      &-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &-message {
+        font-size: 11px;
+      }
+    }
   }
 }
 
