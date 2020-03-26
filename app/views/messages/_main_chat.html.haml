@@ -10,5 +10,21 @@
       .message__upper-info
         %h2.message__upper-info__talker minami
         %P.message__upper-info__day 2020/3/26
-      .message__text good
+      .message__text おはよう
+    .message
+      .message__upper-info
+        %h2.message__upper-info__talker minami
+        %P.message__upper-info__day 2020/3/26
+      .message__text こんにちは
+    .message
+      .message__upper-info
+        %h2.message__upper-info__talker minami
+        %P.message__upper-info__day 2020/3/26
+      .message__text こんばんは
   .form
+    .contents
+      %input.contents__text{:placeholder => "type a message", :type => "text"}
+        .contents__image
+          = link_to "#" do
+            = icon('far', 'image')
+    = link_to 'Send',"#",class: 'send-btn'
