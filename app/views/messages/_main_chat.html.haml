@@ -24,7 +24,7 @@
   .form
     .contents
       %input.contents__text{:placeholder => "type a message", :type => "text"}
-        .contents__image
-          = link_to "#" do
-            = icon('far', 'image')
+        %label{class: "contents__image"}
+          = icon('fas', 'image')
+          %input{type: "file"}
     = link_to 'Send',"#",class: 'send-btn'
