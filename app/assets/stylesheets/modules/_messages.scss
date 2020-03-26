@@ -114,6 +114,29 @@
     height: calc(100vh - 190px);
     width: 100%;
     background-color: #fafafa;
+    padding: 46px 40px;
+    .message {
+      padding-bottom: 46px;
+      &__upper-info {
+        margin-bottom: 12px;
+        display: flex;
+        &__talker {
+          font-size: 16px;
+          color: #333333;
+          font-weight: bold;
+        }
+        &__day {
+          color: #999999;
+          padding-left: 10px;
+          font-size: 12px;
+        }
+      }
+      &__text {
+        color: #434A54;
+        font-size: 14px;
+      }
+    }
+
   }
   .form {
     height: 90px;
