@@ -27,4 +27,5 @@
         %label{class: "contents__image"}
           = icon('fas', 'image')
           %input{type: "file"}
-    = link_to 'Send',"#",class: 'send-btn'
+    %input.send-btn{:type => "submit", :value => "Send"}
+    
