@@ -5,7 +5,7 @@
         = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group 
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('fas', 'edit')
           %span<>
         %li.side-header__box__menu__edit 
@@ -13,13 +13,11 @@
           = icon('fas', 'cog')
           %span<>
   .side-groups
-    .group
-      %p.group-name techcamp
-      %p.group-message まだメッセージがありません
-    .group
-      %p.group-name techcamp
-      %p.group-message まだメッセージがありません
-    .group
-      %p.group-name techcamp
-      %p.group-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          %p.group-name
+            = group.name
+          %p.group-message
+            メッセージはまだありません。
     
