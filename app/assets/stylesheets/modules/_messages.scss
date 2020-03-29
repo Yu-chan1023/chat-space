@@ -97,6 +97,7 @@
           font-size: 12px;
           color: #999999;
           float: left;
+          margin-right: 5px;
         }
       }
     }
@@ -143,26 +144,29 @@
     width: 100%;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    display: flex;
-    .contents {
-      height: 50px;
+    .new_message{
       width: 100%;
-      position: relative;
-      &__text {
+      display: flex;
+      .contents {
         height: 50px;
         width: 100%;
-        padding: 0 40px 0 10px;
-      }
-      &__image {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 22px;
-        a {
-          color: black;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
         }
-        input {
-          display: none;
+        &__image {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 22px;
+          a {
+            color: black;
+          }
+          input {
+            display: none;
+          }
         }
       }
     }
