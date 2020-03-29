@@ -1,31 +1,21 @@
 .chat-main
   .main-header
     .left-box
-      %h2.left-box__group-name group-name
-      %ul.left-box__member-list member : 
-      %li.left-box__member-list-member minami
-    = link_to "Edit", "#", class: 'edit-btn'
+      %h2.left-box__group-name 
+        = @group.name
+      %ul.left-box__member-list
+        member :
+      - @group.users.each do |user|
+        %li.left-box__member-list-member 
+          = user.name
+    = link_to "Edit", edit_group_path(@group.id), class: 'edit-btn'
   .messages
-    .message
-      .message__upper-info
-        %h2.message__upper-info__talker minami
-        %P.message__upper-info__day 2020/3/26
-      .message__text おはよう
-    .message
-      .message__upper-info
-        %h2.message__upper-info__talker minami
-        %P.message__upper-info__day 2020/3/26
-      .message__text こんにちは
-    .message
-      .message__upper-info
-        %h2.message__upper-info__talker minami
-        %P.message__upper-info__day 2020/3/26
-      .message__text こんばんは
+    = render @messages
   .form
-    .contents
-      %input.contents__text{:placeholder => "type a message", :type => "text"}
-        %label{class: "contents__image"}
+    = form_for [@group, @message] do |f|
+      .contents
+        = f.text_field :content, class: "contents__text", placeholder: "type a message"
+        = f.label :image, class: "contents__image" do
           = icon('fas', 'image')
-          %input{type: "file"}
-    %input.send-btn{:type => "submit", :value => "Send"}
-    
+          = f.file_field :image, type: "file"
+      = f.submit 'Send', class: "send-btn" 
