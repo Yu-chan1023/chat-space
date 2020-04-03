@@ -19,10 +19,16 @@
         %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
       #user-search-result
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+      
+  .chat-group-form__field.clearfix
+    .chat-group-form__field--left
+      %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
+    .chat-group-form__field--right
+      #chat-group-users
 
       #chat-group-users.js-add-user
-        .chat-group-user.clearfix.js-chat-member
-          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}
+        .chat-group-user.clearfix.js-chat-member 
+          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id} 
           %p.chat-group-user__name= current_user.name
 
         - group.users.each do |user|
